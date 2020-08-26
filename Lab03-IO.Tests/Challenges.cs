@@ -24,7 +24,7 @@ namespace Lab03_IO.Tests
         [Fact]
         public static void Challenge1_should_return_0_given_less_than_3_numbers()
         {
-            // Assert
+            // Arrange
             int[] values = new int[1] { 2 };
 
             // Act
@@ -37,7 +37,7 @@ namespace Lab03_IO.Tests
         [Fact]
         public static void Challenge1_should_return_product_of_first_3_digits_given_more_than_3()
         {
-            // Assert
+            // Arrange
             int[] values = new int[5] { 1, 2, 3, 4, 5 };
 
             // Act
@@ -45,6 +45,33 @@ namespace Lab03_IO.Tests
 
             // Assert
             Assert.Equal(6, result);
+        }
+
+        [Fact]
+        public static void Averager_should_return_average_of_4_numbers_in_length_4_array_rounded_down()
+        {
+            // Arrange
+            int[] values = new int[4] { 10, 13, 12, 4 };
+
+            // Act
+            int result = Challenger.Averager(values);
+
+            // Assert
+            Assert.Equal(9, result);
+        }
+
+        [Fact]
+        public static void Challenge2_should_make_an_array_with_given_values_then_run_Averager_and_return_average_value()
+        {
+            // Arrange
+            const int value = 5;
+            int[] values = new int[value] { 1, 2, 3, 4, 5 };
+
+            // Act
+            int result = Challenger.Challenge2(value, values);
+
+            // Assert
+            Assert.Equal(3, result);
         }
     }
 }

@@ -28,9 +28,30 @@ namespace Challenges
             return val1 * val2;
         }
 
-        public static int Challenge2(int number)
+        public static int Challenge2(int value, int[] array)
         {
-            return 0;
+            if (value < 2)
+                value = 2;
+            if (value > 10)
+                value = 10;
+
+            int[] result = new int[value];
+            for (int i = 0; i < result.Length; i++)
+            {
+                result[i] = array[i];
+            }
+
+            return Averager(result);
+        }
+
+        public static int Averager(int[] values)
+        {
+            int sum = 0;
+            foreach (int value in values)
+            {
+                sum += value;
+            }
+            return sum / values.Length;
         }
     }
 }
