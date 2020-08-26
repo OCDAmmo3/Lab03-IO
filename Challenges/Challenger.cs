@@ -39,6 +39,8 @@ namespace Challenges
             for (int i = 0; i < result.Length; i++)
             {
                 result[i] = array[i];
+                if (array[i] == 0)
+                    return 0;
             }
 
             return Averager(result);
