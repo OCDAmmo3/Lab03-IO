@@ -73,5 +73,19 @@ namespace Lab03_IO.Tests
             // Assert
             Assert.Equal(3, result);
         }
+
+        [Fact]
+        public static void Challenge2_returns_0_for_an_array_with_0_in_it()
+        {
+            // Arrange
+            const int value = 4;
+            int[] values = new int[value] { 0, 0, 0, 0 };
+
+            // Act
+            int result = Challenger.Challenge2(value, values);
+
+            // Assert
+            Assert.Equal(0, result);
+        }
     }
 }
