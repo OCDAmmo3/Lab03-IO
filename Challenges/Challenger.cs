@@ -55,5 +55,69 @@ namespace Challenges
             }
             return sum / values.Length;
         }
+
+        public static void Challenge3()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                string[] spaces = new string[4 - i];
+                Array.Fill(spaces, " ");
+                string space = String.Join("", spaces);
+                string[] stars = new string[i];
+                Array.Fill(stars, "*");
+                string star = String.Join("", stars);
+                string final = $"{space}{star}*{star}{space}";
+                Console.WriteLine(final);
+            }
+            for (int i = 3; i >= 0; i--)
+            {
+                string[] spaces = new string[4 - i];
+                Array.Fill(spaces, " ");
+                string space = String.Join("", spaces);
+                string[] stars = new string[i];
+                Array.Fill(stars, "*");
+                string star = String.Join("", stars);
+                string final = $"{space}{star}*{star}{space}";
+                Console.WriteLine(final);
+            }
+        }
+
+        public static int Challenge4(int[] values)
+        {
+            Array.Sort(values);
+
+            int mostPop = 1;
+            int result = values[0];
+            int curr = 1;
+
+            for (int i = 1; i < values.Length; i++)
+            {
+                if (values[i] == values[i - 1])
+                    curr++;
+                else
+                {
+                    if (curr > mostPop)
+                    {
+                        mostPop = curr;
+                        result = values[i - 1];
+                    }
+                    curr = 1;
+                }
+            }
+            return result;
+        }
     }
 }
+/*
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    * 
+    
+ */

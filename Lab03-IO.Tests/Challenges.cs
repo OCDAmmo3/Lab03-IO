@@ -87,5 +87,18 @@ namespace Lab03_IO.Tests
             // Assert
             Assert.Equal(0, result);
         }
+
+        [Fact]
+        public static void Challenge4_returns_most_common_value_in_array()
+        {
+            // Arrange
+            int[] values = new int[10] { 1, 1, 1, 2, 3, 2, 5, 6, 3, 10 };
+
+            // Act
+            int result = Challenger.Challenge4(values);
+
+            // Assert
+            Assert.Equal(1, result);
+        }
     }
 }
