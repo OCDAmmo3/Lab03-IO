@@ -6,17 +6,31 @@ namespace Challenges
 {
     public class Challenger
     {
-        public static int Challenge1(int val1, int val2, int val3)
+        public static int Challenge1(int[] values)
         {
+            if (values.Length < 3)
+            {
+                return 0;
+            }
             try
             {
-                return val1 * val2 * val3;
+                return Multiply(values[0], Multiply(values[1], values[2]));
             }
             catch (FormatException fex)
             {
                 Console.WriteLine(fex.Message);
                 throw;
             }
+        }
+
+        public static int Multiply(int val1, int val2)
+        {
+            return val1 * val2;
+        }
+
+        public static int Challenge2(int number)
+        {
+            return 0;
         }
     }
 }
