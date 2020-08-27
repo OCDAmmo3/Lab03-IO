@@ -12,6 +12,7 @@ namespace Challenges
             Challenger.Challenge6();
             Challenger.Challenge7();
             Challenger.Challenge8();
+            Challenger.Challenge9();
         }
     }
 }
