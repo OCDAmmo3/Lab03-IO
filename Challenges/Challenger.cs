@@ -121,13 +121,22 @@ namespace Challenges
             return max;
         }
 
+        public static string path = "words.txt";
         public static void Challenge6()
         {
             Console.WriteLine("Give me a word to write on a file.");
             string input = Console.ReadLine();
-            string path = "words.txt";
 
             File.WriteAllLines(path, new[] { input });
+        }
+
+        public static void Challenge7()
+        {
+            string[] fileText = File.ReadAllLines(path);
+
+            Console.WriteLine("This next line is from the written file.");
+            Console.ReadLine();
+            Console.WriteLine(String.Join(",", fileText));
         }
     }
 }
