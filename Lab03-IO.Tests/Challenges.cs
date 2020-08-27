@@ -100,5 +100,44 @@ namespace Lab03_IO.Tests
             // Assert
             Assert.Equal(1, result);
         }
+
+        [Fact]
+        public static void Challenge5_returns_highest_value_from_unsorted_array()
+        {
+            // Arrange
+            int[] values = new int[7] { 1, 4, 7, 43, 76, 3, 45 };
+
+            // Act
+            int result = Challenger.Challenge5(values);
+
+            // Assert
+            Assert.Equal(76, result);
+        }
+
+        [Fact]
+        public static void Challenge5_returns_highest_value_negative_number()
+        {
+            // Arrange
+            int[] values = new int[5] { 17, -4, 10, -62, 6 };
+
+            // Act
+            int result = Challenger.Challenge5(values);
+
+            // Assert
+            Assert.Equal(17, result);
+        }
+
+        [Fact]
+        public static void Challenge5_returns_same_value_for_array_with_repeated_value()
+        {
+            // Arrange
+            int[] values = new int[5] { 10, 10, 10, 10, 10 };
+
+            // Act
+            int result = Challenger.Challenge5(values);
+
+            // Assert
+            Assert.Equal(10, result);
+        }
     }
 }
