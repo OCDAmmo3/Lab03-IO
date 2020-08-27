@@ -10,6 +10,7 @@ namespace Challenges
         {
             Challenger.Challenge3();
             Challenger.Challenge6();
+            Challenger.Challenge7();
         }
     }
 }
