@@ -148,5 +148,18 @@ namespace Challenges
             Console.ReadLine();
             Console.WriteLine(String.Join(",", fileText));
         }
+
+        public static void Challenge9()
+        {
+            Console.WriteLine("Give me a sentence please.");
+            string userInput = Console.ReadLine();
+
+            string[] words = userInput.Split(" ");
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = $"{words[i]}: {words[i].Length}";
+            }
+            Console.WriteLine(String.Join(", ", words));
+        }
     }
 }
