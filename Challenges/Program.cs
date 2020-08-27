@@ -9,6 +9,7 @@ namespace Challenges
         public static void Main(string[] args)
         {
             Challenger.Challenge3();
+            Challenger.Challenge6();
         }
     }
 }

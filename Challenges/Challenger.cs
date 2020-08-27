@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Challenges
@@ -106,18 +107,27 @@ namespace Challenges
             }
             return result;
         }
+
+        public static int Challenge5(int[] values)
+        {
+            int max = values[0];
+            for (int i = 1; i < values.Length; i++)
+            {
+                if (values[i] > max)
+                {
+                    max = values[i];
+                }
+            }
+            return max;
+        }
+
+        public static void Challenge6()
+        {
+            Console.WriteLine("Give me a word to write on a file.");
+            string input = Console.ReadLine();
+            string path = "words.txt";
+
+            File.WriteAllLines(path, new[] { input });
+        }
     }
 }
-/*
-
-    *
-   ***
-  *****
- *******
-*********
- *******
-  *****
-   ***
-    * 
-    
- */
