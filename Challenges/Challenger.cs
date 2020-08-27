@@ -127,7 +127,7 @@ namespace Challenges
             Console.WriteLine("Give me a word to write on a file.");
             string input = Console.ReadLine();
 
-            File.WriteAllLines(path, new[] { input });
+            File.WriteAllText(path, input);
         }
 
         public static void Challenge7()
@@ -135,6 +135,16 @@ namespace Challenges
             string[] fileText = File.ReadAllLines(path);
 
             Console.WriteLine("This next line is from the written file.");
+            Console.ReadLine();
+            Console.WriteLine(String.Join(",", fileText));
+        }
+
+        public static void Challenge8()
+        {
+            string[] fileText = File.ReadAllLines(path);
+            Array.Resize(ref fileText, fileText.Length - 1);
+
+            Console.WriteLine("The next line will be that same file but with the last entry removed.");
             Console.ReadLine();
             Console.WriteLine(String.Join(",", fileText));
         }
